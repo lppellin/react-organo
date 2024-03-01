@@ -2,46 +2,52 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Teams from './components/Teams';
+import Footer from './comoponents/Footer';
 
 
 function App() {
 
   const teams = [
+    // {
+    //   nome: '-',
+    //   primaryColor: '#57C278',
+    //   altColor: '#D9F7E9'
+    // },
     {
       nome: 'Programação',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#57C278',
+      altColor: '#D9F7E9'
     },
     {
       nome: 'Front-End',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#82CFFA',
+      altColor: '#E8F8FF'
     },
     {
       nome: 'Data Science',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#A6D157',
+      altColor: '#F0F8E2'
     },
     {
       nome: 'DevOps',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#E06B69',
+      altColor: '#FDE7E8'
     },
     {
       nome: 'UX e Design',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#DB6EBF',
+      altColor: '#FAE9F5'
     },
     {
       nome: 'Mobile',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#FFBA05',
+      altColor: '#FFF5D9'
 
     },
     {
       nome: 'Inovação e Gestão',
-      primaryColor: '',
-      altColor: ''
+      primaryColor: '#FF8A29',
+      altColor: '#FFEEDF'
     }
   ]
 
@@ -55,12 +61,15 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form addedPerson={person => addedNewPerson(person)} />
-      <Teams nome="Programação" />
-      <Teams nome="Front-End" />
-      <Teams nome="Data Science" />
-      <Teams nome="DevOps" />
-
+      <Form teams={teams.map(time => time.nome)} addedPerson={person => addedNewPerson(person)} />
+      {teams.map(time => <Teams
+        key={time.nome}
+        nome={time.nome}
+        primaryColor={time.primaryColor}
+        altColor={time.altColor}
+        people={people.filter(person => person.time === time.nome)}
+      />)}
+      <Footer />
 
     </div>
   )

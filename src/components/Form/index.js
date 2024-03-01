@@ -7,16 +7,6 @@ import './form.css';
 
 const Form = (props) => {
 
-    const teams = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -32,6 +22,11 @@ const Form = (props) => {
             imagem,
             time,
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
+
     }
 
     return (
@@ -57,7 +52,7 @@ const Form = (props) => {
                     onChanging={valor => setImagem(valor)} />
                 <DropdownList
                     label="Time"
-                    items={teams}
+                    items={props.teams}
                     valor={time}
                     onChanging={valor => setTime(valor)} />
                 <Button>Criar Card</Button>
