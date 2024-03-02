@@ -2,15 +2,36 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='footer'>
             <section>
                 <ul>
-                    <a href='facebook.com' target='_blank'>
-                        <img src='/images/facebook.png' alt='' />
-                    </a>
+                    <li>
+                        <a href='facebook.com'>
+                            <img src='/images/fb.png' alt='' />
+                        </a>
+                    </li>
+                    <li>
+                        <a href='twitter.com'>
+                            <img src='/images/tw.png' alt='' />
+                        </a>
+                    </li>
+                    <li>
+                        <a href='instagram.com' target="_blank">
+                            <img src='/images/ig.png' alt='' />
+                        </a>
+                    </li>
                 </ul>
             </section>
+            <section>
+                <img src='/images/logo.png' alt='' />
+            </section>
+            <section>
+                <p>
+                    Desenvolvido por Alura.
+                </p>
+            </section>
+            
         </footer>
     )
-
 }
+export default Footer

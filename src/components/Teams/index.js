@@ -10,7 +10,7 @@ const Teams = (props) => {
         props.people.length > 0 && <section className='team' style={css}>
             <h3 style={{ borderColor: props.primaryColor }} >{props.nome}</h3>
             <div className='people'>
-                {props.people.map(person => <Person nome={person.nome} cargo={person.cargo} imagem={person.imagem} />)}
+                {props.people.map(person => <Person bgColor={props.primaryColor} key={person.nome} nome={person.nome} cargo={person.cargo} imagem={person.imagem} />)}
             </div>
         </section>
     )

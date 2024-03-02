@@ -2,17 +2,12 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Teams from './components/Teams';
-import Footer from './comoponents/Footer';
+import Footer from './components/Footer';
 
 
 function App() {
 
   const teams = [
-    // {
-    //   nome: '-',
-    //   primaryColor: '#57C278',
-    //   altColor: '#D9F7E9'
-    // },
     {
       nome: 'Programação',
       primaryColor: '#57C278',
@@ -54,6 +49,7 @@ function App() {
   const [people, setPeople] = useState([])
 
   const addedNewPerson = (person) => {
+    debugger
     console.log(person)
     setPeople([...people, person])
   }

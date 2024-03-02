@@ -1,8 +1,8 @@
 import './Person.css'
 
-const Person = ({nome, imagem, cargo}) => {
+const Person = ({nome, imagem, cargo, bgColor}) => {
     return (<div className='person' >
-        <div className='cabecalho'>
+        <div className='cabecalho' style={{backgroundColor: bgColor}}>
             <img src={imagem} alt={nome} />
         </div>
         <div className='rodape'>

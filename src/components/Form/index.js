@@ -46,6 +46,7 @@ const Form = (props) => {
                     valor={cargo}
                     onChanging={valor => setCargo(valor)} />
                 <TextBox
+                    required={true}
                     label="Imagem"
                     placeholder="Digite o endereço da imagem"
                     valor={imagem}
