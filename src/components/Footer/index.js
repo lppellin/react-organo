@@ -30,7 +30,6 @@ const Footer = () => {
                     Desenvolvido por Alura.
                 </p>
             </section>
-            
         </footer>
     )
 }
