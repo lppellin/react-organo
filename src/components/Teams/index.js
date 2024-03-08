@@ -1,5 +1,5 @@
-import Banner from '../Banner'
-import Button from '../Button'
+// import Banner from '../Banner'
+// import Button from '../Button'
 import Person from '../Person'
 import './Teams.css'
 
